@@ -1,0 +1,2 @@
+°22:09:17.257 [Test worker] INFO com.example.wordindexer.service.WordService -- File processed and saved to DB: C:\Users\sahar\AppData\Local\Temp\words11763531887569880233.txt
+´22:09:17.522 [Test worker] INFO com.example.wordindexer.service.WordService -- File processed and saved to DB: C:\Users\sahar\AppData\Local\Temp\test-words2662675358516138942.txt

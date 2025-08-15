@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "380ff4b4-7f44-458c-aa9a-5e67c0510d11",
+		"name": "Word Indexing API",
+		"description": "Collection to test Word Indexing Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1730749"
+	},
+	"item": [
+		{
+			"name": "Count Words Starting with M",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/words/count-m",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"words",
+						"count-m"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Words Longer Than Five Characters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/words/longer-than-five",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"words",
+						"longer-than-five"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Exact Word",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/words/search?keyword=Melbourne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"words",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "Melbourne"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Process File Manually",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"path\":\"src/main/resources/sample/words.txt\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/words/process",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"words",
+						"process"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
