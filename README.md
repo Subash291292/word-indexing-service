@@ -55,9 +55,27 @@ Spring Boot application for **processing text files, storing words in a database
     - Get words longer than five characters
     - Search exact words
 
-## Build and Run
+---
+## Build & Run (Local)
 
 ```bash
-./gradlew clean build
-
+./gradlew clean build -x test
 ./gradlew bootRun
+```
+
+# Build docker image
+docker build -t word-indexing-app:1.0 .
+
+# Run locally
+docker run -p 8080:8080 word-indexing-app:1.0
+
+# Push to registry
+docker tag word-indexing-app:1.0 <DOCKER_USER>/word-indexing-app:1.0
+docker push <DOCKER_USER>/word-indexing-app:1.0
+
+# Deploy to Kubernetes
+kubectl apply -f word-indexing-service.yaml
+
+# Check resources
+kubectl get pods
+kubectl get svc
